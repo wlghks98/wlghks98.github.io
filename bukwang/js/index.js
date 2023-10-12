@@ -3,6 +3,9 @@
 $(document).ready(function(){
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
+    $(".sidemnbg").toggleClass("on");
+    $(".sidemn").toggleClass("on");
+    $("header").toggleClass("none");
   });
 });
 

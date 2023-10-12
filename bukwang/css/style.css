@@ -13,24 +13,13 @@ ul:after, .cl:after {content: ""; clear: both; display: block;}
 
 /* header & footer */
 
-.hamburger .line{width: 43px; height: 2px; background-color: #fff; display: block; margin: 8px auto; transition: all 0.3s ease-in-out;}
-.hamburger .line.on{background-color: #000;}
-.hamburger .line.page3{background-color: #000;}
-
-.hamburger:hover{cursor: pointer;}
-
-/* ONE */
-
-#hamburger-1.is-active .line:nth-child(1){transform: translateY(5px) rotate(45deg);}
-
-#hamburger-1.is-active .line:nth-child(2){transform: translateY(-5px) rotate(-45deg);}
-
-header {position: absolute; width: 100%; z-index: 10; color: #fff; display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 2%; box-sizing: border-box; transition: 0.3s;}
+header {position: absolute; width: 100%; z-index: 12; color: #fff; display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 8% 0 2%; box-sizing: border-box; transition: 0.3s;}
 header:after {display: block; content: ""; width: 100%; height: 60px; background: #f4f4f4; transform: scaleY(0); transition: 0.4s; position: absolute; left: 0; top: 100%; transform-origin: top;}
 
 header.page3 {color: #000;}
 
 header.on {background: #fff; color: #000;}
+header.none {display: none;}
 header.on:after {transform: scaleY(1);}
 
 header h1 a {background: url(../images/logo1.png) no-repeat center; display: block; width: 145px; height: 36px; transition: 0.3s;}
@@ -64,6 +53,33 @@ header .snb li > ul li:hover {background: #74b567; color: #fff;}
 
 .btntop {background:rgba(0,0,0,0.3) url(../images/btn_top.png) no-repeat; width: 27px; height: 40px; border-radius: 20px; position: fixed; top: 70%; right: 3%; z-index: 100; opacity: 0; transition: 1s; cursor: pointer;}
 .btntop.on {opacity: 1;}
+
+/* hamburger tab menu */
+
+.hamburger {position: absolute; right: 3%; top: 26px; z-index: 12;}
+.hamburger .line{width: 43px; height: 2px; background-color: #fff; display: block; margin: 8px auto; transition: all 0.3s ease-in-out;}
+.hamburger .line.on{background-color: #000;}
+.hamburger .line.page3{background-color: #000;}
+
+.hamburger:hover{cursor: pointer;}
+
+#hamburger-1.is-active {}
+
+#hamburger-1.is-active .line:nth-child(1){transform: translateY(5px) rotate(45deg);}
+
+#hamburger-1.is-active .line:nth-child(2){transform: translateY(-5px) rotate(-45deg);}
+
+.sidemnbg {display: block; width: 45px; height: 45px; background: #6e6e6e; border-radius: 50%; position: absolute; right: 3%; top: 20px; z-index: 10; transform: scale(0); transition: 0.6s ease-in-out;}
+.sidemnbg.on {transform:scale(100);}
+
+.sidemn {position: absolute; top: 0; left: 0; z-index: 11; width: 100%; height: 100vh; text-align: center; background: url(../images/all_bg.jpg) no-repeat center/cover; opacity: 0; }
+.sidemn.on {opacity: 1; transition: 1s 0.6s;}
+
+.sidemn ul {padding: 5% 3% 0; box-sizing: border-box; display: flex; flex-wrap: wrap; width: 100%; height: 100%;}
+.sidemn ul li {width: 25%; color: #fff; font-size: 29px; font-weight: 500;}
+.sidemn ul li a:before {display: inline-block; content: ""; width: 3px; height: 25px; background: #7bbd26; margin-right: 10px;}
+.sidemn ul li ul {padding: 0; display: block; margin-top: 20px;}
+.sidemn ul li ul li {width: auto; font-size: 17px; color: rgba(255,255,255,0.7); font-weight: normal;}
 
 /* fullpage common */
 
