@@ -63,8 +63,6 @@ header .snb li > ul li:hover {background: #74b567; color: #fff;}
 
 .hamburger:hover{cursor: pointer;}
 
-#hamburger-1.is-active {}
-
 #hamburger-1.is-active .line:nth-child(1){transform: translateY(5px) rotate(45deg);}
 
 #hamburger-1.is-active .line:nth-child(2){transform: translateY(-5px) rotate(-45deg);}
