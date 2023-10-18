@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 /* reset */
 
 * {margin: 0; padding: 0;}
@@ -22,6 +22,7 @@ header.on {background: #fff; color: #000;}
 header.none {display: none;}
 header.on:after {transform: scaleY(1);}
 
+header h1 {text-indent: -9999px; font-size: 0; overflow: hidden;}
 header h1 a {background: url(../images/logo1.png) no-repeat center; display: block; width: 145px; height: 36px; transition: 0.3s;}
 header h1 a.on {background: url(../images/logo2.png) no-repeat center; display: block; width: 145px; height: 36px;}
 
@@ -62,6 +63,8 @@ header .snb li > ul li:hover {background: #74b567; color: #fff;}
 .hamburger .line.page3{background-color: #000;}
 
 .hamburger:hover{cursor: pointer;}
+
+#hamburger-1.is-active {}
 
 #hamburger-1.is-active .line:nth-child(1){transform: translateY(5px) rotate(45deg);}
 

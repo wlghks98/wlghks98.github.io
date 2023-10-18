@@ -1,0 +1,58 @@
+@media (max-width:800px) { /* 모바일용 */
+    .pc {display: none !important;}
+    
+    /* section intro */
+
+
+    #intro .bg {box-shadow: 5px 10px 10px 7px rgba(0,0,0,0.3);}
+
+    #intro .cont h1 {font-size: 28px; padding: 40% 0 15% 3%; line-height: 2;}
+
+    #intro .cont .typing {font-size: 16px; width: 270px; padding-left: 3%;}
+
+    @keyframes type {
+        0% {width: 0;}
+        100% {width: 270px;}
+    }
+
+    #intro .cont .circle {position: static; margin-top: 40px;}
+
+    #intro .cont .copy {right: -130px; font-size: 12px;}
+    
+    /* container */
+
+    #container nav {height: 40px; justify-content: flex-end;}
+    #container nav ul li {margin-right: 10px; font-size: 13px;}
+
+    #container > div {height: auto;}
+    #container > div > .wrap {padding: 50px 3% 0;}
+
+    #page1 dt {font-size: 20px; margin-bottom: 10px;}
+    #page1 dt:before {display: none;}
+    #page1 dd {font-size: 16px; line-height: 1.5;}
+
+    #page1 .left {width: auto; float: none;}
+    #page1 .left h2 {font-size: 20px;}
+    #page1 .left h2:before {width: 5px; height: 25px; top: 7px; margin-right: 5px;}
+    #page1 .left img {width: 150px; height: 200px; margin: 20px 0;}
+
+    #page1 .right {width: auto; display: block; text-align: center;}
+
+    #page1 .right .box {display: block; text-align: center;}
+    #page1 .right .box > dl {width: auto;}
+
+    #page1 .right .skill {margin-top: 10px;}
+    #page1 .right .skill dd {display: block; margin-bottom: 10px;}
+
+    #page1 .right .skill .graph {margin-top: 15px;}
+    #page1 .right .skill .graph span {font-size: 12px; line-height: 20px;}
+    
+    
+    
+    
+}
+
+@media (min-width:801px) { /* PC용 */
+    .mob {display: none !important;}
+    
+}

@@ -1,0 +1,156 @@
+/* reset */
+@font-face {
+    font-family: 'GSM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0;}
+li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { vertical-align: top; }
+
+html {overflow-x: hidden;}
+body {font-size: 14px; color: #222; font-family: 'GSM';}
+.wrap {position: relative;}
+.wrap:after, ul:after, .cl:after {content: ""; clear: both; display: block;}
+.blind {position: absolute; left: -9999px; font-size: 0; width: 0; height: 0; overflow: hidden;}
+
+/* section intro */
+
+#intro {height: 100vh; position: fixed; top: 0; left: 0; width: 100%; z-index: 1;}
+
+#intro .bg {background: #26ABCD; width: 88%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; border-radius: 0 50px 50px 0; box-shadow: 20px 25px 20px 15px rgba(0,0,0,0.3);}
+
+#intro .cont h1 {font-size: 100px; padding: 5% 0 10% 5%;}
+
+#intro .cont .typing {font-size: 40px; color: #fff; width: 690px; overflow: hidden; border-right: 2px solid #fff; white-space: nowrap; animation: type 2.5s steps(30) 1, blink 0.5s step-end infinite alternate; line-height: 2; padding-left: 5%;}
+
+@keyframes type {
+    0% {width: 0;}
+    100% {width: 690px;}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+#intro .cont .circle {position: absolute; bottom: 25%; left: 65%; animation: circle 10s linear infinite;}
+
+@keyframes circle {
+    100% {transform: rotate(360deg);}
+}
+
+#intro .cont .copy {position: absolute; right: 0; top: 50%; transform: rotate(90deg);}
+
+#intro .cont .scrolldown {position: absolute; bottom: 3%; left: calc(50% - 11px); display: flex; flex-direction: column; align-items: center; color: #fff;}
+#intro .cont .scrolldown span {width: 15px; height: 15px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; transform: rotate(-45deg); animation: scroll 2s infinite; opacity: 0;}
+#intro .cont .scrolldown span:nth-of-type(1) {animation-delay: 0s; margin-top: 10px;}
+#intro .cont .scrolldown span:nth-of-type(2) {animation-delay: 0.15s;}
+#intro .cont .scrolldown span:nth-of-type(3) {animation-delay: 0.3s;}
+
+@keyframes scroll {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* container common */
+
+#container {position: relative; top: 100vh; background:#f9f9f9; z-index: 2;}
+
+#container nav {position: fixed; top: 0; width: 100%; z-index: 3; height: 70px; display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.6); padding: 0 3%; box-sizing: border-box; backdrop-filter:blur(10px); opacity: 0; transition: 0.6s;}
+
+#container nav.on {opacity: 1;}
+
+#container nav > a {font-size: 20px; font-weight: bold; border: 2px solid #222; border-radius: 5px; padding: 5px; box-sizing: border-box;}
+#container nav ul {display: flex;}
+#container nav ul li {margin-right: 20px; font-size: 18px;}
+#container nav ul li a {font-weight: normal; color: #bbb; transition: 0.5s;}
+
+#container nav ul li a.select {color: #222;}
+#container nav ul li a.select:after {content: ""; display: block; width: 100%; height: 3px; background: #26abcd;}
+#container nav ul li a.select:hover {color: inherit;}
+
+#container nav ul li a:hover {color: #26abcd;}
+#container nav ul li a:after {content: ""; display: block; width: 0; height: 3px; background: #26abcd; transition: 0.5s;}
+#container nav ul li a:hover:after {width: 100%;}
+
+#container h2 {font-size: 50px; color: #333;}
+#container h2:before {content: ""; display: inline-block; width: 7px; height: 50px; background: #26abcd; position: relative; top: 10px; margin-right: 15px;}
+
+#container > div {height: 100vh;}
+#container > div > .wrap {padding: 90px 3% 0; box-sizing: border-box;}
+
+/* page1 */
+
+#page1 dt {font-size: 32px; color: #26abcd; margin-bottom: 15px;}
+#page1 dt:before {content: ""; display: inline-block; width: 7px; height: 7px; background: #26abcd; position: relative; top: -5px; margin-right: 15px;}
+#page1 dd {font-size: 20px; letter-spacing: -0.5px; word-break: keep-all; line-height: 1.8;}
+
+#page1 .left {width: 40%; float: left; text-align: center;}
+#page1 .left img {border-radius: 20px; margin: 60px 0;}
+#page1 .left dd {margin-bottom: 10px;}
+
+#page1 .right {width: 60%; display: flex; flex-direction: column; justify-content: space-between;}
+
+#page1 .right .introduction dd {letter-spacing: -1.5px; line-height: 1.5;}
+
+#page1 .right .box {display: flex; justify-content: space-between;}
+#page1 .right .box > dl {width: 48%; margin-top: 10px;}
+
+#page1 .right .skill {margin-bottom: 0;}
+#page1 .right .skill dd {display: flex; align-items: center; margin-bottom: 15px;}
+
+#page1 .right .skill .graph {display: inline-block; background: #ccc; height: 20px; width: 60%; border-radius: 7px; margin-left: 20px;}
+#page1 .right .skill .graph span {display: block; background: #26abcd; height: 20px; font-size: 16px; text-align: right; border-radius: 7px; padding: 0 10px; color: #f1f1f1; box-sizing: border-box;}
+
+#page1 .right .skill .graph.stack1 span {animation: stack1 2s 1;}
+#page1 .right .skill .graph.stack2 span {animation: stack2 2.3s 1;}
+#page1 .right .skill .graph.stack3 span {animation: stack3 2.6s 1;}
+#page1 .right .skill .graph.stack4 span {animation: stack4 2.9s 1;}
+#page1 .right .skill .graph.stack5 span {animation: stack5 3.2s 1;}
+#page1 .right .skill .graph.stack6 span {animation: stack6 3.5s 1;}
+
+@keyframes stack1 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 95%;}
+}
+@keyframes stack2 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 95%;}
+}
+@keyframes stack3 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 70%;}
+}
+@keyframes stack4 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 90%;}
+}
+@keyframes stack5 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 80%;}
+}
+@keyframes stack6 {
+    0% {width: 0; color: rgba(255,255,255,0);}
+    40% {color: rgba(255,255,255,1);}
+    100% {width: 60%;}
+}
+
+/* page2 */
+
+#page2 h2 {text-align: center;}
+
+
+
+
+
+
+
+
