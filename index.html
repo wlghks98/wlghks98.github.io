@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="images/k_logo.png">
+    <meta property="og:url" content="http://show980.dothome.co.kr">
+    <meta property="og:description" content="2023 퍼블리셔 포트폴리오">
+    <meta property="og:title" content="Portfolio">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/m_style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
     <section id="intro">
         <div class="bg"></div>
         <div class="cont">
-            <h1>
+            <h1 data-aos="fade" data-aos-duration="1500">
                 WEB PUBLISHER<br>
                 PORTFOLIO
             </h1>
@@ -33,11 +40,13 @@
             <ul>
                 <li><a href="#page1" class="select">ABOUT</a></li>
                 <li><a href="#page2">PUBLISHING</a></li>
+                <li><a href="#page3">DESIGN</a></li>
+                <li><a href="#page4">CONTACT</a></li>
             </ul>
         </nav>
         <div id="page1">
             <div class="wrap">
-                <div class="left">
+                <div class="left" data-aos="fade-up-left">
                     <h2>About me</h2>
                     <div class="img">
                         <img src="images/idpic.png" alt="증명사진">
@@ -50,7 +59,7 @@
                         <dd><strong>E-mail</strong> : ogh700@naver.com</dd>
                     </dl>
                 </div>
-                <div class="right">
+                <div class="right" data-aos="fade-up-right">
                     <dl class="introduction">
                         <dt>Introduction</dt>
                         <dd>저는 모나지 않은 둥글한 성격으로 타인과의 의사소통을 강점으로 꼽을 수 있으며 늘 성장과 함께 문제를 해결하려는 태도로 웹 개발에 대하여 깊게 고민하고 팀원들과 소통하는 개발자가 되겠습니다. 부족하지만 열람해주셔서 감사합니다.</dd>
@@ -112,17 +121,22 @@
             </div>
         </div>
         <div id="page2">
+            <div class="portbg">
+                <div class="portimg">
+                    <a href="#none"></a>
+                </div>
+            </div>
             <div class="wrap">
-                <h2>PUBLISHING</h2>
-                <div class="tab">
+                <h2 data-aos="fade-up">PUBLISHING</h2>
+                <div class="tab" data-aos="fade-left">
                     <ul>
-                        <li><a href="#">국민연금공단</a></li>
+                        <li><a href="#" class="select">국민연금공단</a></li>
                         <li><a href="#">대림대학교</a></li>
                         <li><a href="#">부광약품</a></li>
                     </ul>
-                    <div class="gukmin">
+                    <div class="gukmin on">
                         <div class="left">
-                            <h3>국민연금공단(반응형사이트)</h3>
+                            <h3>국민연금공단 (반응형)</h3>
                             <p>
                                 <span>TYPE</span>
                                 Responsive Web
@@ -133,30 +147,175 @@
                             </p>
                             <p>
                                 <span>TOOL</span>
-                                HTML,CSS,JS(jQuery)
+                                HTML, CSS, JS(jQuery), AOS
                             </p>
                             <p>
                                 <span>참여도</span>
                                 개인작업 100%
                             </p>
                             <div class="btn">
-                                <a href="#" class="view">작업과정</a>
-                                <a target="_blank" href="gukmin/index.html">사이트 바로가기</a>
+                                <a target="_blank" href="https://www.nps.or.kr/jsppage/main.jsp">Site : before</a>
+                                <a href="#none" class="view1">Process</a>
+                                <a target="_blank" href="gukmin/index.html">Site : after</a>
                             </div>
                         </div>
                         <div class="right">
                             <figure>
-                                <img src="" alt="">
+                                <img src="images/gukmin_mockup.png" alt="국민연금공단 반응형 이미지">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="daerim">
+                        <div class="left">
+                            <h3>대림대학교 입학처 (반응형)</h3>
+                            <p>
+                                <span>TYPE</span>
+                                Responsive Web
+                            </p>
+                            <p>
+                                <span>PAGE</span>
+                                Main + Sub*1
+                            </p>
+                            <p>
+                                <span>TOOL</span>
+                                HTML, CSS, JS(jQuery), AOS, Swiper
+                            </p>
+                            <p>
+                                <span>참여도</span>
+                                개인작업 100%
+                            </p>
+                            <div class="btn">
+                                <a target="_blank" href="https://ent.daelim.ac.kr/index.do">Site : before</a>
+                                <a href="#none" class="view2">Process</a>
+                                <a target="_blank" href="daerim/index.html">Site : after</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <figure>
+                                <img src="images/daerim_mockup.png" alt="대림대학교 반응형 이미지">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="bukwang">
+                        <div class="left">
+                            <h3>부광약품</h3>
+                            <p>
+                                <span>TYPE</span>
+                                Fullpage Pc.ver
+                            </p>
+                            <p>
+                                <span>PAGE</span>
+                                Main
+                            </p>
+                            <p>
+                                <span>TOOL</span>
+                                HTML, CSS, JS(jQuery), Fullpage, Swiper
+                            </p>
+                            <p>
+                                <span>참여도</span>
+                                개인작업 100%
+                            </p>
+                            <div class="btn">
+                                <a target="_blank" href="https://www.bukwang.co.kr/">Site : before</a>
+                                <a href="#none" class="view3">Process</a>
+                                <a target="_blank" href="bukwang/index.html">Site : after</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <figure>
+                                <img src="images/bukwang_mockup.png" alt="부광약품 이미지">
                             </figure>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="page3">
+            <div class="designbg">
+                <div class="designimg">
+                    <a href="#none"></a>
+                </div>
+            </div>
+            <div class="wrap">
+                <h2 data-aos="fade-up">DESIGN</h2>
+                <div class="slidecont" data-aos="fade-left">
+                    <ul class="slide">
+                        <li>
+                            <div class="left">
+                                <h3>성형외과 사이트 Design</h3>
+                                <p>시중 성형외과 사이트를 벤치마킹 한 후<br>포토샵으로 메인페이지와 서브 페이지들을<br> 디자인 작업한 결과물입니다.</p>
+                            </div>
+                            <div class="right">
+                                <a href="#none" class="dview1">
+                                    <span>View</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <h3>가구판매 사이트 Design</h3>
+                                <p>시중 가구품목 판매 사이트를 벤치마킹 한 후<br>포토샵으로 메인페이지와 서브 페이지들을<br> 디자인 작업한 결과물입니다.</p>
+                            </div>
+                            <div class="right">
+                                <a href="#none" class="dview2">
+                                    <span>View</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <h3>레져스포츠 사이트 Design</h3>
+                                <p>시중 레져스포츠 체험 사이트를 벤치마킹 한 후<br>포토샵으로 메인페이지와 서브 페이지들을<br> 디자인 작업한 결과물입니다.</p>
+                            </div>
+                            <div class="right">
+                                <a href="#none" class="dview3">
+                                    <span>View</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#none" class="prev">Prev</a>
+                    <a href="#none" class="next">Next</a>
+                </div>
+            </div>
+        </div>
+        <div id="page4">
+            <div class="wrap">
+                <h2 data-aos="fade-up">CONTACT</h2>
+                <div class="contbox" data-aos="fade-left">
+                    <div class="mail">
+                        <a href="mailto:ogh700@naver.com">ogh700@naver.com</a>
+                    </div>
+                    <div class="tel">
+                        <a href="tel:01051200876">010-5120-0876</a>
+                    </div>
+                </div>
+                <div class="track">
+                    <div class="anitxt">
+                        Thank you for watching my portfolio.
+                    </div>
+                    <div class="anitxt">
+                        Thank you for watching my portfolio.
+                    </div>
+                </div>
+                <p class="txt">본 사이트는 상업적 용도가 아닌 개인 포트폴리오 용으로 제작되었습니다.<br>
+                <span>Copyright © 2023 by JI-HWAN OH All right reserved.</span></p>
+            </div>
+        </div>
     </section>
     
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/index.js"></script>
+    
+    <!-- AOS 애니메이션 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            offset:200,
+            once:false,
+        });
+    </script>
     
 </body>
 </html>
