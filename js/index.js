@@ -15,7 +15,6 @@ $("nav ul li a").click(function(){
     
     var ln = $(this).parent().index() + 1;
     var st = $("#page" + ln).offset().top;
-    console.log(st);
     
     $("html").animate({scrollTop:st},500);
     return false;
@@ -25,7 +24,6 @@ $("nav ul li a").click(function(){
 
 $(window).scroll(function(){
     var sc = $(this).scrollTop();
-    console.log(sc);
     
     if ((bw > 800 && sc > 890) || (bw < 800 && sc > 770)) {
         $("nav").addClass("on");
